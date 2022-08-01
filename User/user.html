@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head>
+    <title>
+        User_Data
+    </title>
+    <style>
+        div {
+            padding: 2px;
+            margin: 2px;
+        }  
+        input[type=submit]{
+            background-color:rgb(219, 27, 27);
+        }
+    </style>
+    <script>
+        function validate(){
+            var name=document.form1.Name;
+            var date=document.form1.Date;
+            var email=document.form1.Email;
+            var income=document.form1.Income;
+            var ip=document.form1.IP;
+                if(name.value.length<=0){
+                    alert("Name is required");
+                    Name.focus();
+                    return false;
+                }
+                if(date.value.length<=0){
+                    alert("Date must be entered");
+                    date.focus();
+                    return false;
+                }
+                if(email.value.length<=0){
+                    alert("Email must be entered");
+                    email.focus();
+                    return false;
+                }
+                if(income.value.length<=0){
+                    alert("Income must be entered");
+                    income.focus();
+                    return false;
+                }
+                if(ip.value.length<=0){
+                    alert("IP must be entered");
+                    ip.focus();
+                    return false;
+                }
+        }
+    </script>
+</head>
+    <body align=center>
+        <h1 style="font-family: 'Courier New', Courier, monospace;"><u>User Data</u></h1>
+        <div>
+            
+                <form  action=user.php name="form1" autocomplete="on" onsubmit="return validate()" method="POST">
+                <caption><h3><u>ADD User Info</u></h3></caption><br>
+            
+            <div>
+                <label for="Name">Name</label>
+                <input type="text" id="Name" name="Name">
+            </div>
+            <div>
+                <label for="Date">Date</label>
+                <input type="datetime-local" id="Date" name="Date">
+            </div>
+            <div>
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email">
+            </div>
+            <div>
+                <label for="Income">Income</label>
+                <input type="text" id="Income" name="Income">
+            </div>
+            <div>
+                <label for="IP">IP</label>
+                <input type="text" id="IP" name="IP">
+            </div>
+            <div>
+                <input type="submit" id="submit" name="submit" value="Submit">
+                <a href="fetchcpy.php" target="_blank"> <input type="button" name="view Details " id="view" value="view Details" style="background-color:grey;padding: 6px;border-radius: 10px;"></a>
+            </div>
+       
+            </form>
+      
+        </div>
+    </body>
+</html>
