@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MainPage</title>
+    </head>
+    
+    <body style="background: rgb(242, 240, 240)">
+    <div style="text-align: right;">
+        <a href="signin.html"> <input type="button" name="signin" id="signin" value="signin" style="background-color: rgb(4, 172, 66);padding: 6px;border-radius: 10px;"></a>
+    </div>
+        <h1 style="text-align: center;color:darkred;font-family: 'Courier New', Courier, monospace;">Welcome to DJ_Damoos Canteen</h1>
+        <P>-------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ---
+            <script>
+                const pagebody=document.querySelector("body");
+                function changebg(){
+                    let color='#'+(Math.random()*0xFFFFFF<<0).toString(16);
+                    pagebody.style.background = color;
+                }
+            </script>
+            <div align=center>
+                <button type="button" onclick="changebg()" style="background-color: rgb(2, 65, 36);padding: 6px;border-radius: 10px;">click here</button>
+               
+            </div>---------------------------------------------------------------------------------------------------
+            -------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------</P>
+            <table align=center>
+                <tr>
+            <td><a href="add.html"><input type="button" name="ADD" id="ADD" value="ADD" style="background-color: rgb(250, 0, 0);padding: 6px;border-radius: 10px;"></a></td>
+            <td><a href="searchitem.html"><input type="button" name="SEARCH" id="SEARCH" value="SEARCH" style="background-color: rgb(252, 5, 5);padding: 6px;border-radius: 10px;"></a></td>
+            <td><a href="order.html"> <input type="button" name="ORDER" id="ORDER" value="ORDER" style="background-color: rgb(253, 4, 4);padding: 6px;border-radius: 10px;"></a></td>
+        </tr>
+        </table>
+    </body>
+</html>

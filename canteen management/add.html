@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html><head>
+    <title>
+        Canteen Management System
+    </title>
+    <style>
+        div {
+            padding: 2px;
+            margin: 2px;
+        }  
+        input[type=submit]{
+            background-color:rgb(219, 27, 27);
+        }
+    </style>
+    <script>
+        function validate(){
+            var item=document.form1.itemname;
+            var qty=document.form1.quantity;
+            var price=document.form1.price_per_piece;
+                if(item.value.length<=0){
+                    alert("itemname is required");
+                    item.focus();
+                    return false;
+                }
+                if(qty.value.length<=0){
+                    alert("quantity must be entered");
+                    qty.focus();
+                    return false;
+                }
+                if(price.value.length<=0){
+                    alert("price per piece must be entered");
+                    price.focus();
+                    return false;
+                }
+        }
+    </script>
+</head>
+    <body align=center>
+        <h1 style="font-family: 'Courier New', Courier, monospace;"><u>DAMOOS CANTEEN</u></h1>
+        <div>
+            
+                <form  action=add.php name="form1" autocomplete="on" onsubmit="return validate()" method="POST">
+                <caption><h3><u>ADD ITEMS</u></h3></caption><br>
+            
+            <div>
+                <label for="itemname">ItemName</label>
+                <input type="text" id="itemname" name="itemname">
+            </div>
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity">
+            </div>
+            <div>
+                <label for="price_per_piece">Price</label>
+                <input type="number" id="price_per_piece" name="price_per_piece">
+            </div>
+            <div>
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </div>
+       
+            </form>
+      
+        </div>
+    </body>
+</html>

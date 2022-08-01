@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>order</title>
+        <style>
+            input[type=submit]{
+            background-color:rgb(219, 27, 27);
+        }
+        </style>
+    </head>
+    <body Align=center>
+        <div style="padding-top: 40px">
+        <form action=order.php method=POST autocomplete="off" id=form3>
+            <caption><h2><u>Order Item</u></h2></caption>
+            <div style="padding-top: 2px">
+                <label for="orderitem" style="color: rgb(22, 4, 10);padding-top: 20px"><b>Enter the Item</b></label>
+                <input type="text" name="orderitem" id="orderitem">
+            </div>
+            <div style="padding-top: 2px">
+                <label for="qty" style="color: rgb(22, 4, 10);padding-top: 20px"><b>Enter the Quantity</b></label>
+                <input type="number" name="qty" id="qty">
+            </div>
+            <div style="padding-top: 20px">
+                <input type="submit" id="submit" name="submit" value="submit">
+            </div>
+        </form>
+    </div>
+    </body>
+</html>

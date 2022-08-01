@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SignInToDamoosCanteen</title>
+        <script>
+            function validate(){
+                var name=document.sign_in.name;
+                var dept=document.sign_in.dept;
+                var batch=document.sign_in.batch;
+                var reg=document.sign_in.reg;
+                var yr=document.sign_in.yr;
+                var contact=document.sign_in.contact;
+
+                if (name.value.length<=0){
+                    alert("name is required");
+                    name.focus();
+                    return false;
+                }
+                if (dept.value.length<=0){
+                    alert("Name of dept is required");
+                    dept.focus();
+                    return false;
+                }
+                if (batch.value.length<=0){
+                    alert("Batch is required");
+                    batch.focus();
+                    return false;
+                }
+                if (reg.value.length<=0){
+                    alert("reg n.o is required");
+                    reg.focus();
+                    return false;
+                }
+                if (yr.value.length<=0){
+                    alert("year is required");
+                    yr.focus();
+                    return false;
+                }
+                if (contact.value.length<=0){
+                    alert("contact n.o is required");
+                    contact.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body style="font-family: 'Courier New', Courier, monospace;color: darkgreen;background-color: floralwhite;">
+        <br><br>
+        <form action="signin.php" name="sign_in" id="form4" autocomplete="off" onsubmit="return validate()" method="POST"> 
+        <h1 style="text-align: center;">SignIn</h1>
+        <br>
+        
+                <table border="2" width="30" align="center">
+                
+                <tr>
+                    <th colspan="2">PERSONAL DETAILS</th>
+                </tr>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><input type="text" name="name" maxlength="100" size="30" width="100%"></td>
+                </tr>
+                <tr>
+                    <td><b>Department</b></td>
+                    <td><input type="text" name="dept" maxlength="100" size="30" width="100%"></td>
+                </tr>
+                <tr>
+                    <td><b>Batch</b></td>
+                    <td><input type="text" name="batch" maxlength="100" size="30" width="100%"></td>
+                </tr>
+                <tr>
+                    <td><b>RegNo</b></td>
+                    <td><input type="text" name="reg" maxlength="100" size="30" width="100%"></td>
+                </tr>
+                <tr>
+                    <td><b>Year</b></td>
+                    <td><input type="text" name="yr" maxlength="100" size="30" width="100%"></td>
+                </tr>
+                <tr>
+                    <td><b>Contact</b></td>
+                    <td><input type="text" name="contact" maxlength="100" size="30" width="100%"></td>
+                </tr>
+            </table>
+            <br>
+            <table align="center">
+                <tr>
+                    <td style="padding-right: 10px;"><input type="submit" name="send" value="SUBMIT" style="border-radius:15px;background-color: forestgreen;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;padding-left: 5px;"></td>
+                    <td><input type="reset" name="clear" value="RESET" style="background-color: red; border-radius: 15px;padding-top: 5px;padding-bottom: 5px;padding-right: 5px;padding-left: 5px;"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
